@@ -30,5 +30,14 @@ messageForm.addEventListener("submit", e => {
 function appendMessage(message) {
   const messageElement = document.createElement("div");
   messageElement.innerText = message;
-  messageContainer.append(messageElement);
+  console.log(message);
+  if (message[3] == "@") {
+    var arr = message.split(" ");
+    if (arr[1] == "@" + name) {
+      console.log("YOURS");
+      messageContainer.append(messageElement);
+    } else {
+      console.log("NOT YOURS");
+    }
+  } else messageContainer.append(messageElement);
 }
