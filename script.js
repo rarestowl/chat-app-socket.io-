@@ -39,5 +39,10 @@ function appendMessage(message) {
     } else {
       console.log("NOT YOURS");
     }
+  }
+  else if (message[3] == "/") {
+    var img = document.createElement('img'); 
+    img.src =  "img.jpg";
+    messageContainer.append(img);
   } else messageContainer.append(messageElement);
 }
